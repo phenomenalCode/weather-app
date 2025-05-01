@@ -1,0 +1,214 @@
+/* Global styling*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f8ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /*full height of the viewpoint - it will take up the entire vertical height of the user's screen*/
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+
+/*App styling*/
+.container {
+  background: linear-gradient(135deg, #a2c2e8, #f6e6f6);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  max-width: 320px;
+  width: 100%;
+  height: 600px;
+  margin: 100px auto;
+  border: none;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#main-icon {
+  width: 60px;
+  height: 60px;
+  margin: 15px auto;
+  display: block;
+  margin: 25px auto 20px auto;
+  position: relative;
+  top: 15px;
+}
+
+
+.overlay {
+  width: 100%;
+  height: 60%;
+  background: rgba(3, 10, 85, 0.45);
+  clip-path: ellipse(120% 92% at 50% 0%);
+}
+
+.weather-content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  /* Puts content above image*/
+  color: #ffffff;
+}
+
+.input-container {
+  color: #ffffff;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  border: 1px solid #ffffff;
+  width: fit-content;
+  border-radius: 8px;
+  z-index: 2;
+}
+
+input {
+  background-color: inherit;
+  color: #ffffff;
+  padding: 8px 16px;
+  font-size: 0.8rem;
+  text-decoration: none;
+  text-align: left;
+  border: none;
+  outline: none;
+}
+
+input::placeholder {
+  color: #dedede;
+}
+
+#search-button {
+  border: 1px solid transparent;
+  width: 40px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  cursor: pointer;
+  color: #ffffff;
+}
+
+#search-button img {
+  width: 24px;
+  height: 24px;
+  border-left: 1px solid #ffffff;
+}
+
+#next-side-button {
+  margin: 40px 0;
+  border: none;
+  width: 70px;
+  height: 70px;
+  background-color: rgb(32, 32, 136);
+  color: white;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  /* Allows precise positioning */
+  top: 46%;
+  /* Center vertically */
+  right: 10px;
+  /* Align to the right */
+  transform: translateY(-50%);
+  /* Adjust to true center */
+}
+
+/*Weather content styling*/
+#temperature {
+  font-size: 40px;
+  font-weight: 300;
+}
+
+#city {
+  font-size: 35px;
+  font-weight: 300;
+}
+
+#time {
+  font-size: 18px;
+  font-weight: 300;
+  margin: 6px 0 8px 0;
+}
+
+#weather,
+#sunrise,
+#sunset {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 6px 0;
+}
+
+#sunrise {
+  margin-right: 10px;
+}
+
+.sunrise-sunset {
+  display: flex;
+}
+
+.weather-forecast {
+  color: #333;
+  position: absolute;
+  top: 76%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  /* Puts content above image */
+}
+
+.weather-forecast table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.weather-forecast td {
+  padding: 6px 12px;
+  font-size: 16 px;
+}
+
+
+.weather-forecast img {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  top: 0;
+  left: 25%;
+}
+
+#next-side-button:hover {
+  background-color: #1976d2;
+}
